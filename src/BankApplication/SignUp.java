@@ -80,71 +80,85 @@ public class SignUp extends JFrame implements ActionListener{
 	public SignUp() {
 		st = BankAppConnectionLoader.loadsql();
 		
+		
+		
+		
+		
 		frame = new JFrame();
 		
 		frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		frame.setTitle("Sign Up");
+		frame.setUndecorated(true);
 		frame.setSize(450, 550);
 		frame.setResizable(false);
 		frame.setLayout(null);
 		frame.getContentPane();
 		frame.setVisible(true);
 		
-		font = new Font("Inconsolata", Font.PLAIN, 13);
+		JLabel labelJ = new JLabel();
+		labelJ.setSize(450, 550);
+		frame.add(labelJ);
+		
+		
+		ImageIcon image = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//Your paragraph text.png");
+		labelJ.setIcon(image);
+		
+		
+		font = new Font("Inconsolata", Font.BOLD, 13);
 		
 		firstname = new JLabel("First Name: ");
-		firstname.setBounds(40, 60, 90, 20);
+		firstname.setBounds(40, 100, 90, 20);
 		firstname.setFont(font);
 		
 		lastname = new JLabel("Last Name: ");
-		lastname.setBounds(40, 100, 90, 20);
+		lastname.setBounds(40, 140, 90, 20);
 		lastname.setFont(font);
 		
 		email = new JLabel("Email: ");
-		email.setBounds(40, 140, 90, 20);
+		email.setBounds(40, 180, 90, 20);
 		email.setFont(font);
 		
 		openbal = new JLabel("Opening Balance: ");
-		openbal.setBounds(40, 180, 150, 20);
+		openbal.setBounds(40, 220, 150, 20);
 		openbal.setFont(font);
 		
 		createpin = new JLabel("Create Pin: ");
-		createpin.setBounds(40, 220, 150, 20);
+		createpin.setBounds(40, 260, 150, 20);
 		createpin.setFont(font);
 		
 		confirmpin = new JLabel("Confirm Pin: ");
-		confirmpin.setBounds(40, 260, 150, 20);
+		confirmpin.setBounds(40, 300, 150, 20);
 		confirmpin.setFont(font);
 		
 		securityquestion1 = new JLabel("Your favourite color?");
-		securityquestion1.setBounds(40, 300, 210, 20);
+		securityquestion1.setBounds(40, 340, 210, 20);
 		securityquestion1.setFont(font);
 		
 		securityquestion2 = new JLabel("Your pet peeve?");
-		securityquestion2.setBounds(40, 340, 210, 20);
+		securityquestion2.setBounds(40, 380, 210, 20);
 		securityquestion2.setFont(font);
 		
 		sex = new JLabel("Gender: ");
-		sex.setBounds(40, 380, 90, 20);
+		sex.setBounds(40, 420, 90, 20);
 		sex.setFont(font);
 		
 		female = new JRadioButton("Female");
 		female.setSelected(true);
-		female.setBounds(200, 380, 70, 20);
+		female.setBounds(200, 420, 70, 20);
 		female.setFocusable(false);
 		
 		male = new JRadioButton("Male");
-		male.setBounds(290, 380, 70, 20);
+		male.setBounds(290, 420, 70, 20);
 		male.setFocusable(false);
 		ButtonGroup genderGroup = new ButtonGroup();
 		genderGroup.add(male);
 		genderGroup.add(female);
 		
-		font = new Font("Inconsolata", Font.PLAIN, 12);
+		font = new Font("Inconsolata", Font.BOLD, 12);
 		
 		sign_in = new JButton("Register");
 		sign_in.setFont(font);
-		sign_in.setBounds(160, 420, 85, 20);
+		sign_in.setBounds(180, 460, 85, 20);
 		sign_in.setFocusable(false);
 		sign_in.addActionListener(this);
 		
@@ -152,34 +166,34 @@ public class SignUp extends JFrame implements ActionListener{
 		
 		firstnameField = new JTextField(30);
 		firstnameField.setText(Placeholder);
-		firstnameField.setBounds(210, 60, 150, 20);
+		firstnameField.setBounds(210, 100, 150, 20);
 		firstnameField.getText();
 		firstnameField.setFont(font);
 		firstnameField.setCaretColor(Color.RED);
 
 		lastnameField = new JTextField(30);
 		lastnameField.setText(Placeholder1);
-		lastnameField.setBounds(210, 100, 150, 20);
+		lastnameField.setBounds(210, 140, 150, 20);
 		lastnameField.getText();
 		lastnameField.setFont(font);
 		lastnameField.setCaretColor(Color.RED);
 
 		emailField = new JTextField(30);
 		emailField.getText();
-		emailField.setBounds(210, 140, 150, 20);
+		emailField.setBounds(210, 180, 150, 20);
 		emailField.setText(Placeholder2);
 		emailField.setFont(font);
 		emailField.setCaretColor(Color.RED);
 		
 		Opening = new JTextField(30);
 		Opening.getText();
-		Opening.setBounds(210, 180, 150, 20);
+		Opening.setBounds(210, 220, 150, 20);
 		Opening.setText(Placeholder3);
 		Opening.setFont(font);
 		Opening.setCaretColor(Color.RED);
 
 		createpinField = new JPasswordField(30);
-		createpinField.setBounds(210, 220, 150, 20);
+		createpinField.setBounds(210, 260, 150, 20);
 		createpinField.setText(Placeholder4);
 		createpinField.setEchoChar((char) 0);
 		createpinField.setCaretColor(Color.RED);
@@ -187,7 +201,7 @@ public class SignUp extends JFrame implements ActionListener{
 		createpinField.getText();
 
 		confirmpinField = new JPasswordField(30);
-		confirmpinField.setBounds(210, 260, 150, 20);
+		confirmpinField.setBounds(210, 300, 150, 20);
 		confirmpinField.setText(Placeholder5);
 		confirmpinField.setEchoChar((char) 0);
 		confirmpinField.setCaretColor(Color.RED);
@@ -196,14 +210,14 @@ public class SignUp extends JFrame implements ActionListener{
 		
 		securityans1 = new JTextField(30);
 		securityans1.getText();
-		securityans1.setBounds(210, 300, 150, 20);
+		securityans1.setBounds(210, 340, 150, 20);
 		securityans1.setText(Placeholder6);
 		securityans1.setFont(font);
 		securityans1.setCaretColor(Color.RED);
 		
 		securityans2 = new JTextField(30);
 		securityans2.getText();
-		securityans2.setBounds(210, 340, 150, 20);
+		securityans2.setBounds(210, 380, 150, 20);
 		securityans2.setText(Placeholder6);
 		securityans2.setFont(font);
 		securityans2.setCaretColor(Color.RED);
@@ -405,26 +419,26 @@ public class SignUp extends JFrame implements ActionListener{
 			}
 		});
 		
-		frame.add(firstname);
-		frame.add(firstnameField);
-		frame.add(lastname);
-		frame.add(lastnameField);
-		frame.add(email);
-		frame.add(emailField);
-		frame.add(openbal);
-		frame.add(Opening);
-		frame.add(createpin);
-		frame.add(createpinField);
-		frame.add(confirmpin);
-		frame.add(confirmpinField);
-		frame.add(securityquestion1);
-		frame.add(securityquestion2);
-		frame.add(securityans1);
-		frame.add(securityans2);
-		frame.add(sex);
-		frame.add(female);
-		frame.add(male);
-		frame.add(sign_in);
+		labelJ.add(firstname);
+		labelJ.add(firstnameField);
+		labelJ.add(lastname);
+		labelJ.add(lastnameField);
+		labelJ.add(email);
+		labelJ.add(emailField);
+		labelJ.add(openbal);
+		labelJ.add(Opening);
+		labelJ.add(createpin);
+		labelJ.add(createpinField);
+		labelJ.add(confirmpin);
+		labelJ.add(confirmpinField);
+		labelJ.add(securityquestion1);
+		labelJ.add(securityquestion2);
+		labelJ.add(securityans1);
+		labelJ.add(securityans2);
+		labelJ.add(sex);
+		labelJ.add(female);
+		labelJ.add(male);
+		labelJ.add(sign_in);
 		
 //		frame.pack();
 		frame.setLocationRelativeTo(null);

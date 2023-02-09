@@ -113,14 +113,25 @@ public class Labs {
 			
 			frame = new JFrame();
 			
-			frame.setVisible(true);
+			
 			frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 			frame.setTitle("Login");
+			frame.setUndecorated(true);
 			frame.setSize(500, 600);
 			frame.setResizable(false);
 			frame.setLayout(null);
+			frame.setVisible(true);
 			
-			font = new Font("Verdana", Font.PLAIN, 11);
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			frame.add(labelK);
+			
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//1.png");
+			labelK.setIcon(image1);
+			
+			
+			font = new Font("Verdana", Font.PLAIN, 12);
 			
 			icon = new ImageIcon("/U+1F6B9");
 			
@@ -132,44 +143,44 @@ public class Labs {
 			
 			
 			username = new JLabel("Username/Email: ");
-			username.setBounds(100, 330, 120, 20);
+			username.setBounds(100, 390, 120, 20);
 			username.setFont(font);
 			
 			pin = new JLabel("Pin: ");
-			pin.setBounds(100, 360, 80, 20);
+			pin.setBounds(100, 410, 80, 20);
 			pin.setFont(font);
 			
 			do_you = new JLabel("Don't have an account? ");
 			do_you.setFont(font);
-			do_you.setBounds(140, 420, 150, 15);
+			do_you.setBounds(120, 465, 180, 15);
 			
 			sign_up = new JLabel("Sign Up");
 			sign_up.setFont(font);
-			sign_up.setBounds(285, 420, 50, 15);
+			sign_up.setBounds(295, 465, 50, 15);
 			
 			fogpass = new JLabel("Forget Password?");
 			fogpass.setFont(font);
-			fogpass.setBounds(130, 435, 100, 15);
+			fogpass.setBounds(120, 485, 130, 15);
 			
 			depo = new JLabel("Deposit?");
 			depo.setFont(font);
-			depo.setBounds(240, 435, 50, 15);
+			depo.setBounds(240, 485, 70, 15);
 			
 			witdraw = new JLabel("Withdraw?");
 			witdraw.setFont(font);
-			witdraw.setBounds(300, 435, 100, 15);
+			witdraw.setBounds(300, 485, 100, 15);
 			
 			font = new Font("Verdana", Font.ITALIC, 10);
 			
 			loginname = new JTextField(30);
 			loginname.setText(Placeholder);
-			loginname.setBounds(220, 330, 150, 20);
+			loginname.setBounds(220, 390, 150, 20);
 			loginname.getText();
 			username.setIcon(null);
 			loginname.setFont(font);
 //			loginname.setCaretColor(Color.RED);
 			pinField = new JPasswordField(30);
-			pinField.setBounds(220, 360, 150, 20);
+			pinField.setBounds(220, 410, 150, 20);
 			pinField.setText(Placeholder1);
 			pinField.setEchoChar((char) 0);
 //			pinField.setCaretColor(Color.RED);
@@ -241,40 +252,47 @@ public class Labs {
 					// TODO Auto-generated method stub
 					JDialog dialog = createDialog("Change Password");
 					
-					JPanel mypanel = new JPanel();
-					mypanel.setLayout(null);
+					JLabel labelK = new JLabel();
+					labelK.setSize(500, 600);
+					
+					
+					ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//19.png");
+					labelK.setIcon(image1);
+					
+//					JPanel mypanel = new JPanel();
+//					mypanel.setLayout(null);
 					JLabel myacc = createLabel("Your account number: ");
-					myacc.setBounds(90, 90, 150, 20);
+					myacc.setBounds(90, 150, 150, 20);
 					JLabel getname = createLabel("Username: ");
-					getname.setBounds(90, 140, 150, 20);
+					getname.setBounds(90, 200, 150, 20);
 					JLabel security1 = createLabel("Your favourite color?");
-					security1.setBounds(90, 190, 150, 20);
+					security1.setBounds(90, 250, 150, 20);
 					JLabel security2  = createLabel("Your pet peeve?");
-					security2.setBounds(90, 240, 150, 20);
+					security2.setBounds(90, 300, 150, 20);
 					JLabel newpin = createLabel("Enter New Pin: ");
-					newpin.setBounds(90, 290, 150, 20);
+					newpin.setBounds(90, 350, 150, 20);
 					JLabel connewpin = createLabel("Confirm New Pin: ");
-					connewpin.setBounds(90, 340, 150, 20);
+					connewpin.setBounds(90, 400, 150, 20);
 					JTextField myaccField = createTextField();
-					myaccField.setBounds(230, 90, 150, 20);
+					myaccField.setBounds(230, 150, 150, 20);
 					JTextField nameField = createTextField();
-					nameField.setBounds(230, 140, 150, 20);
+					nameField.setBounds(230, 200, 150, 20);
 					nameField.setEditable(false);
 					JTextField answer1 = createTextField();
-					answer1 .setBounds(230, 190, 150, 20);
+					answer1 .setBounds(230, 250, 150, 20);
 					JTextField answer2 = createTextField();
-					answer2.setBounds(230, 240, 150, 20);
+					answer2.setBounds(230, 300, 150, 20);
 					JPasswordField newpinField = createPassField();
-					newpinField.setBounds(230, 290, 150, 20);
+					newpinField.setBounds(230, 350, 150, 20);
 					newpinField.setEchoChar((char) '*');
 					JPasswordField newpinField2 = createPassField();
-					newpinField2.setBounds(230, 340, 150, 20);
+					newpinField2.setBounds(230, 400, 150, 20);
 					newpinField2.setEchoChar((char) '*');
-//					
+					
 					JButton chng = new JButton("Change");
 					chng.setFont(font);
 					chng.setFocusable(false);
-					chng.setBounds(200, 390, 100, 20);
+					chng.setBounds(200, 450, 100, 20);
 					
 					myaccField.addFocusListener(new FocusListener() {
 						@Override
@@ -388,23 +406,23 @@ public class Labs {
 						}
 					});
 					
-					mypanel.add(myacc);
-					mypanel.add(myaccField);
-					mypanel.add(getname);
-					mypanel.add(nameField);
-					mypanel.add(security1);
-					mypanel.add(security2);
-					mypanel.add(newpin);
-					mypanel.add(connewpin);
-					mypanel.add(answer1);
-					mypanel.add(answer2);
-					mypanel.add(newpinField);
-					mypanel.add(newpinField2);
-					mypanel.add(chng);
+					labelK.add(myacc);
+					labelK.add(myaccField);
+					labelK.add(getname);
+					labelK.add(nameField);
+					labelK.add(security1);
+					labelK.add(security2);
+					labelK.add(newpin);
+					labelK.add(connewpin);
+					labelK.add(answer1);
+					labelK.add(answer2);
+					labelK.add(newpinField);
+					labelK.add(newpinField2);
+					labelK.add(chng);
 					
+					dialog.add(labelK);
 					
-					dialog.add(mypanel);
-					
+					dialog.setUndecorated(true);
 					dialog.setSize(500, 600);
 					dialog.setLocationRelativeTo(null);
 					dialog.setVisible(true);
@@ -419,32 +437,39 @@ public class Labs {
 					// TODO Auto-generated method stub
 					
 					JDialog dialog = createDialog("Deposit");
+					
+					JLabel labelK = new JLabel();
+					labelK.setSize(500, 600);
+					
+					
+					ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//4.png");
+					labelK.setIcon(image1);
 
-					JPanel mypanel = new JPanel();
-					mypanel.setLayout(null);
+//					JPanel mypanel = new JPanel();
+//					mypanel.setLayout(null);
 
 					JLabel accnt = createLabel("Account Number: ");
-					accnt.setBounds(90, 190, 120, 20);
+					accnt.setBounds(90, 250, 120, 20);
 					JLabel name = createLabel("Account Name: ");
-					name.setBounds(90, 240, 120, 20);
+					name.setBounds(90, 300, 120, 20);
 					JLabel rep = createLabel("Depoitor's Name: ");
-					rep.setBounds(90, 290, 120, 20);
+					rep.setBounds(90, 350, 120, 20);
 					JLabel amt = createLabel("Amount: ");
-					amt.setBounds(90, 340, 120, 20);
+					amt.setBounds(90, 400, 120, 20);
 					JTextField entacc = createTextField();
-					entacc.setBounds(220, 190, 150, 20);
+					entacc.setBounds(220, 250, 150, 20);
 					JTextField accname = createTextField();
-					accname.setBounds(220, 240, 150, 20);
+					accname.setBounds(220, 300, 150, 20);
 					accname.setEditable(false);
 					JTextField deposname = createTextField();
-					deposname.setBounds(220, 290, 150, 20);
+					deposname.setBounds(220, 350, 150, 20);
 					JTextField amtfield = createTextField();
-					amtfield.setBounds(220, 340, 150, 20);
+					amtfield.setBounds(220, 400, 150, 20);
 					
 					JButton depos = new JButton("Deposit");
 					depos.setFont(font);
 					depos.setFocusable(false);
-					depos.setBounds(195, 390, 80, 20);
+					depos.setBounds(195, 450, 80, 20);
 
 					entacc.addFocusListener(new FocusListener() {
 						@Override
@@ -498,19 +523,20 @@ public class Labs {
 						}
 					});
 					
-					mypanel.add(name);
-					mypanel.add(accname);
-					mypanel.add(accnt);
-					mypanel.add(entacc);
-					mypanel.add(rep);
-					mypanel.add(deposname);
-					mypanel.add(amt);
-					mypanel.add(amtfield);
+					labelK.add(name);
+					labelK.add(accname);
+					labelK.add(accnt);
+					labelK.add(entacc);
+					labelK.add(rep);
+					labelK.add(deposname);
+					labelK.add(amt);
+					labelK.add(amtfield);
 					
-					mypanel.add(depos);
+					labelK.add(depos);
 					
-					dialog.add(mypanel);
+					dialog.add(labelK);
 
+					dialog.setUndecorated(true);
 					dialog.setSize(500, 600);
 					dialog.setLocationRelativeTo(null);
 					dialog.setVisible(true);
@@ -546,12 +572,12 @@ public class Labs {
 										double finalbalance  = balanceforint + amountforint;
 										System.out.println(finalbalance);
 										if (amountforint > 0) {
-	//									query = "INSERT INTO Deposits(AccountNumber, AccountName, WithdrawersName, Amount, AccountBalance) VALUES (" +"'" + acctnum + "'," + "'" + accname + "'," + "'" +
-	//											deponame + "'," + "'" + amount + "'," + "'" + finalbalance + "');";
-	//									st1.executeUpdate(query);
-	//									
-	//									query = "update Signup set openingbalance = " + finalbalance + " where accountnumber = " + acctnum + "; ";
-	//									st1.executeUpdate(query);
+										query = "INSERT INTO Deposits(AccountNumber, AccountName, WithdrawersName, Amount, AccountBalance) VALUES (" +"'" + acctnum + "'," + "'" + accname + "'," + "'" +
+												deponame + "'," + "'" + amount + "'," + "'" + finalbalance + "');";
+										st1.executeUpdate(query);
+										
+										query = "update Signup set openingbalance = " + finalbalance + " where accountnumber = " + acctnum + "; ";
+										st1.executeUpdate(query);
 											JOptionPane.showMessageDialog(null, "Deposit Successful");
 										}
 										else {
@@ -606,32 +632,39 @@ public class Labs {
 				public void mouseClicked(MouseEvent e) {
 					// TODO Auto-generated method stub
 					JDialog dialog = createDialog("Withdrawal");
+					
+					JLabel labelK = new JLabel();
+					labelK.setSize(500, 600);
+					
+					
+					ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//5.png");
+					labelK.setIcon(image1);
 
-					JPanel mypanel = new JPanel();
-					mypanel.setLayout(null);
+//					JPanel mypanel = new JPanel();
+//					mypanel.setLayout(null);
 
 					JLabel accnt = createLabel("Account Number: ");
-					accnt.setBounds(90, 190, 120, 20);
+					accnt.setBounds(90, 250, 120, 20);
 					JLabel name = createLabel("Account Name: ");
-					name.setBounds(90, 240, 120, 20);
+					name.setBounds(90, 300, 120, 20);
 					JLabel repnamlabel = createLabel("Withdrawer's Name: ");
-					repnamlabel.setBounds(90, 290, 120, 20);
+					repnamlabel.setBounds(90, 350, 120, 20);
 					JLabel amountlabel = createLabel("Amount: ");
-					amountlabel.setBounds(90, 340, 120, 20);
+					amountlabel.setBounds(90, 400, 120, 20);
 					JTextField entacc = createTextField();
-					entacc.setBounds(220, 190, 150, 20);
+					entacc.setBounds(220, 250, 150, 20);
 					JTextField accname = createTextField();
-					accname.setBounds(220, 240, 150, 20);
+					accname.setBounds(220, 300, 150, 20);
 					accname.setEditable(false);
 					JTextField recipname = createTextField();
-					recipname.setBounds(220, 290, 150, 20);
+					recipname.setBounds(220, 350, 150, 20);
 					JTextField amount = createTextField();
-					amount.setBounds(220, 340, 150, 20);
+					amount.setBounds(220, 400, 150, 20);
 					
 					JButton withdrawal = new JButton("Withdraw");
 					withdrawal.setFont(font);
 					withdrawal.setFocusable(false);
-					withdrawal.setBounds(210, 390, 90, 20);
+					withdrawal.setBounds(210, 450, 90, 20);
 
 					entacc.addFocusListener(new FocusListener() {
 						@Override
@@ -684,19 +717,20 @@ public class Labs {
 						}
 					});
 					
-					mypanel.add(name);
-					mypanel.add(accname);
-					mypanel.add(accnt);
-					mypanel.add(entacc);
-					mypanel.add(repnamlabel);
-					mypanel.add(recipname);
-					mypanel.add (amountlabel);
-					mypanel.add( amount);
+					labelK.add(name);
+					labelK.add(accname);
+					labelK.add(accnt);
+					labelK.add(entacc);
+					labelK.add(repnamlabel);
+					labelK.add(recipname);
+					labelK.add (amountlabel);
+					labelK.add( amount);
 					
-					mypanel.add(withdrawal);
+					labelK.add(withdrawal);
 					
-					dialog.add(mypanel);
+					dialog.add(labelK);
 
+					dialog.setUndecorated(true);
 					dialog.setSize(500, 600);
 					dialog.setLocationRelativeTo(null);
 					dialog.setVisible(true);
@@ -731,12 +765,12 @@ public class Labs {
 											System.out.println(finalbalance);
 											
 											if(balanceforint >= amountforint) {
-//												query = "INSERT INTO Deposits(AccountNumber, AccountName, WithdrawersName, Amount, AccountBalance) VALUES (" +"'" + acctnum + "'," + "'" + accname + "'," + "'" +
-//														getname + "'," + "'" + amount + "'," + "'" + finalbalance + "');";
-//														st1.executeUpdate(query);
+												query = "INSERT INTO Deposits(AccountNumber, AccountName, WithdrawersName, Amount, AccountBalance) VALUES (" +"'" + acctnum + "'," + "'" + accname + "'," + "'" +
+														getname + "'," + "'" + amount + "'," + "'" + finalbalance + "');";
+														st1.executeUpdate(query);
 												
-	//											query = "update Signup set openingbalance = " + finalbalance + " where accountnumber = " + acctnum + "; ";
-	//											st.executeUpdate(query);
+												query = "update Signup set openingbalance = " + finalbalance + " where accountnumber = " + acctnum + "; ";
+												st.executeUpdate(query);
 												JOptionPane.showMessageDialog(null, "Withdraw Successful");
 											}
 											else {
@@ -787,7 +821,7 @@ public class Labs {
 			
 			log_in = new JButton("Login");
 			log_in.setFont(font);
-			log_in.setBounds(210, 395, 70, 20);
+			log_in.setBounds(210, 440, 70, 20);
 			log_in.setFocusable(false);
 			
 			log_in.addActionListener( new ActionListener() {
@@ -837,16 +871,16 @@ public class Labs {
 				}
 			});
 			
-			frame.add(username);
-			frame.add(loginname);
-			frame.add(pin);
-			frame.add(pinField);
-			frame.add(log_in);
-			frame.add(do_you);
-			frame.add(sign_up);
-			frame.add(fogpass);
-			frame.add(depo);
-			frame.add(witdraw);
+			labelK.add(username);
+			labelK.add(loginname);
+			labelK.add(pin);
+			labelK.add(pinField);
+			labelK.add(log_in);
+			labelK.add(do_you);
+			labelK.add(sign_up);
+			labelK.add(fogpass);
+			labelK.add(depo);
+			labelK.add(witdraw);
 			
 //			frame.pack();
 			frame.setLocationRelativeTo(null);
@@ -856,6 +890,7 @@ public class Labs {
 			JLabel label = new JLabel();
 			label.setText(text);
 			label.setFont(font);
+			label.setForeground(new Color(11, 9, 10));
 			return label;
 			
 		}
@@ -863,17 +898,15 @@ public class Labs {
 		public JTextField createTextField() {
 			JTextField textField = new JTextField(25);
 			textField.setFont(font);
+			textField.setForeground(new Color(11, 9, 10));
 			return textField;
 		}
 		
 		public JPasswordField createPassField() {
 			JPasswordField PassField = new JPasswordField(25);
 			PassField.setFont(font);
+			PassField.setForeground(new Color(11, 9, 10));
 			return PassField;
-		}
-		
-		public void reset() {
-			thisTableModel.setRowCount(0);
 		}
 		
 		public JDialog createDialog(String title) {
@@ -881,6 +914,7 @@ public class Labs {
 			mydialog.setTitle(title);
 			mydialog.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			mydialog.setFont(font);
+			mydialog.setForeground(new Color(11, 9, 10));
 			return mydialog;
 		}
 		
@@ -915,16 +949,6 @@ public class Labs {
 				JOptionPane.showMessageDialog(null, "Cannot accept numbers...");
 			}
 			return result;
-		}
-		
-		public JTable createTable(DefaultTableModel ox) {
-			JTable table = new JTable(ox);
-			table.setPreferredScrollableViewportSize(new Dimension(360, 310));
-			table.setFillsViewportHeight(true);
-			table.setFont(new Font("Verdana", Font.PLAIN, 10));
-			table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
-			table.getModel();
-			return table;
 		}
 	}
 	
@@ -965,7 +989,16 @@ public class Labs {
 			
 			frame = new JFrame();
 			frame.setLayout(null);
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			frame.add(labelK);
+			
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//11.png");
+			labelK.setIcon(image1);
 		
+			frame.setUndecorated(true);
 			frame.setVisible(true);
 			frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 			frame.setTitle("HOUK Bank");
@@ -975,6 +1008,7 @@ public class Labs {
 			
 			font = new Font("Inconsolata", Font.BOLD, 10);
 			frame.setFont(font);
+			frame.setForeground(new Color(11, 9, 10));
 			
 			menu = new JMenuBar();
 			services = new JMenu("\u2630");
@@ -991,8 +1025,8 @@ public class Labs {
 			changepass = new JMenuItem("Change Password"); changepass.setFont(font);
 			draw_hist = new JMenuItem("Withdrawal History"); draw_hist.setFont(font);
 			depo_hist = new JMenuItem("Deposit History"); depo_hist.setFont(font);
-			airtime_hist = new JMenuItem("Transfer History"); airtime_hist.setFont(font);
-			data_hist = new JMenuItem("Transfer History"); data_hist.setFont(font);
+			airtime_hist = new JMenuItem("Airtime History"); airtime_hist.setFont(font);
+			data_hist = new JMenuItem("Data History"); data_hist.setFont(font);
 			bills_hist = new JMenuItem("Bills Payment History"); bills_hist.setFont(font);
 			space = new JMenuItem(""); space1 = new JMenuItem(""); space2 = new JMenuItem(""); space3 = new JMenuItem(""); space4 = new JMenuItem(""); space5 = new JMenuItem("");
 			space6 = new JMenuItem("");
@@ -1052,8 +1086,16 @@ public class Labs {
 					// TODO Auto-generated method stub
 					JDialog dialog = createDialog("Loans and Credits");
 					
-					JPanel mypanel = new JPanel();
-					mypanel.setLayout(null);
+//					JPanel mypanel = new JPanel();
+//					mypanel.setLayout(null);
+					
+					JLabel labelK = new JLabel();
+					labelK.setSize(500, 600);
+					
+					
+					ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//77.png");
+					labelK.setIcon(image1);
+					
 					JLabel lab = createLabel("Interest Rate: ");
 					lab.setBounds(90, 160, 150, 20);
 					JLabel lab_1 = createLabel("per Month");
@@ -1128,13 +1170,11 @@ public class Labs {
 									ackname = rs.getString(1);
 									ackacc = rs.getString(4);
 									mybal = rs.getString(5);
-									System.out.println("I'm getting here");
 									convertbal = Double.parseDouble(mybal);
 									amountforint = Double.parseDouble(the_amnt);
-									JOptionPane.showMessageDialog(null, maxim);
-									JOptionPane.showMessageDialog(null, rate);
+									double finalbalance  = convertbal - amountforint;
+									System.out.println(finalbalance);
 									if (!(the_amnt.isBlank() || pin.isBlank())) {
-										System.out.println("Dami");
 										if (confirmMypass(pin) && confirmMyloan(the_amnt)) {
 											
 //											query = "CREATE TABLE IF NOT EXISTS Loans(LoanAmount bigint, MaxLoanAmount bigint, MonthlyRepayment bigint, TotalRepayment bigint)";
@@ -1149,8 +1189,8 @@ public class Labs {
 															month_interest + "'," + "'" + totaldue + "');";
 													st1.executeUpdate(query);
 													
-//													query = "update Signup set openingbalance = " + finalbalance + " where FirstName = " + loginID + "; ";
-//													st.executeUpdate(query);
+													query = "update Signup set openingbalance = " + finalbalance + " where FirstName = " + loginID + "; ";
+													st.executeUpdate(query);
 												}
 												else if (!(rs.next() && rs.getString(4).equals(the_amnt))) {
 													JOptionPane.showMessageDialog(null, "Invalid Pin");
@@ -1270,25 +1310,26 @@ public class Labs {
 					});
 					
 					
-					mypanel.add(lab);
-					mypanel.add(lab_1);
-					mypanel.add(lab2);
-					mypanel.add(lab3);
-					mypanel.add(lab4);
-					mypanel.add(lab5);
-					mypanel.add(lab6);
-					mypanel.add(enterpin);
-					mypanel.add(payloan);
-					mypanel.add(ratefield);
-					mypanel.add(max_amt);
-					mypanel.add(amt);
-					mypanel.add(mnth_repay);
-					mypanel.add(total_repay);
-					mypanel.add(enterpinfield);
-					mypanel.add(buy);
+					labelK.add(lab);
+					labelK.add(lab_1);
+					labelK.add(lab2);
+					labelK.add(lab3);
+					labelK.add(lab4);
+					labelK.add(lab5);
+					labelK.add(lab6);
+					labelK.add(enterpin);
+					labelK.add(payloan);
+					labelK.add(ratefield);
+					labelK.add(max_amt);
+					labelK.add(amt);
+					labelK.add(mnth_repay);
+					labelK.add(total_repay);
+					labelK.add(enterpinfield);
+					labelK.add(buy);
 					
-					dialog.add(mypanel);
+					dialog.add(labelK);
 					
+					dialog.setUndecorated(true);
 					dialog.setSize(500, 600);
 					dialog.setLocationRelativeTo(null);
 					dialog.setVisible(true);
@@ -1306,8 +1347,16 @@ public class Labs {
 					// TODO Auto-generated method stub
 					JDialog dialog = createDialog("Airtime Top-up");
 					
-					JPanel mypanel = new JPanel();
-					mypanel.setLayout(null);
+//					JPanel mypanel = new JPanel();
+//					mypanel.setLayout(null);
+					
+					JLabel labelK = new JLabel();
+					labelK.setSize(500, 600);
+					
+					
+					ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//19.png");
+					labelK.setIcon(image1);
+					
 					JLabel lab = createLabel("Enter Number: ");
 					lab.setBounds(90, 250, 90, 20);
 					JLabel lab2  = createLabel("Enter Amount: ");
@@ -1394,8 +1443,8 @@ public class Labs {
 													amountforint + "');";
 											st1.executeUpdate(query);
 											
-//											query = "update Signup set openingbalance = " + finalbalance + " where FirstName = " + loginID + "; ";
-//											st.executeUpdate(query);
+											query = "update Signup set openingbalance = " + finalbalance + " where FirstName = " + loginID + "; ";
+											st.executeUpdate(query);
 										}
 										else {
 											JOptionPane.showMessageDialog(null, "Invalid input! \nPlease input correct details" ,"",JOptionPane.ERROR_MESSAGE);
@@ -1418,16 +1467,17 @@ public class Labs {
 						}
 					});
 					
-					mypanel.add(lab);
-					mypanel.add(lab2);
-					mypanel.add(lab3);
-					mypanel.add(number);
-					mypanel.add(amt);
-					mypanel.add(jcb);
-					mypanel.add(buy);
+					labelK.add(lab);
+					labelK.add(lab2);
+					labelK.add(lab3);
+					labelK.add(number);
+					labelK.add(amt);
+					labelK.add(jcb);
+					labelK.add(buy);
 					
-					dialog.add(mypanel);
+					dialog.add(labelK);
 					
+					dialog.setUndecorated(true);
 					dialog.setSize(500, 600);
 					dialog.setLocationRelativeTo(null);
 					dialog.setVisible(true);
@@ -1506,8 +1556,16 @@ public class Labs {
 			// TODO Auto-generated method stub
 			JDialog dialog = createDialog("Data");
 			
-			JPanel mypanel = new JPanel();
-			mypanel.setLayout(null);
+//			JPanel mypanel = new JPanel();
+//			mypanel.setLayout(null);
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//88.png");
+			labelK.setIcon(image1);
+			
 			JLabel lab = createLabel("Enter Number: ");
 			lab.setBounds(100, 250, 120, 20);
 			JLabel lab2  = createLabel("Enter Network: ");
@@ -1618,8 +1676,8 @@ public class Labs {
 										am + "'," + "'" + x + "');";
 								st1.executeUpdate(query);
 								
-//								query = "UPDATE Signup SET openingbalance = " + finalbalance + " WHERE FirstName = " + loginID + "; ";
-//								st.executeUpdate(query);
+								query = "UPDATE Signup SET openingbalance = " + finalbalance + " WHERE FirstName = " + loginID + "; ";
+								st.executeUpdate(query);
 							}
 							else {
 								JOptionPane.showMessageDialog(null, "Insufficient funds");
@@ -1685,16 +1743,17 @@ public class Labs {
 				
 			});
 			
-			mypanel.add(lab);
-			mypanel.add(number);
-			mypanel.add(lab3);
-			mypanel.add(td);
-			mypanel.add(lab2);
-			mypanel.add(netwrk1);
-			mypanel.add(buy);
+			labelK.add(lab);
+			labelK.add(number);
+			labelK.add(lab3);
+			labelK.add(td);
+			labelK.add(lab2);
+			labelK.add(netwrk1);
+			labelK.add(buy);
 			
-			dialog.add(mypanel);
+			dialog.add(labelK);
 			
+			dialog.setUndecorated(true);
 			dialog.setSize(500, 600);
 			dialog.setLocationRelativeTo(null);
 			dialog.setVisible(true);
@@ -1732,9 +1791,15 @@ public class Labs {
 			// TODO Auto-generated method stub
 			JDialog dialog = createDialog("Bills Payments");
 			
-			JPanel mypanel = new JPanel();
-			mypanel.setLayout(null);
+//			JPanel mypanel = new JPanel();
+//			mypanel.setLayout(null);
 			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//99.png");
+			labelK.setIcon(image1);
 			
 			JLabel lab = createLabel("Paying For? ");
 			lab.setBounds(90, 230, 120, 20);
@@ -1814,9 +1879,9 @@ public class Labs {
 												query = "INSERT INTO Bills_Payments(Service, AccountNumber, AccountName, Amount, HostAccountNumber) VALUES (" +"'" + chk + "'," + "'" + useraccnum + "'," + "'" +
 														repacc + "'," + "'" + amounttransfered + "'," + "'" + accID + "');";
 												st2.executeUpdate(query);
-			//									
-			//									query = "Update Signup set openingBalance = '" + mynewbalance +"' where AccountNumber = '"+ myaccnum +"'; ";
-			//									st2.executeUpdate(query);
+												
+												query = "Update Signup set openingBalance = '" + mynewbalance +"' where AccountNumber = '"+ myaccnum +"'; ";
+												st2.executeUpdate(query);
 												
 			//									query = "truncate table Bills_Payments;";
 												
@@ -1860,20 +1925,21 @@ public class Labs {
 				}
 			});
 			
-			mypanel.add(lab);
-			mypanel.add(paybill);
-			mypanel.add(lab2);
-			mypanel.add(number);
-			mypanel.add(lab3);
-			mypanel.add(name);
-			mypanel.add(lab4);
-			mypanel.add(amnt);
-			mypanel.add(buy);
-			mypanel.add(enterpin);
-			mypanel.add(enterpinfield);
+			labelK.add(lab);
+			labelK.add(paybill);
+			labelK.add(lab2);
+			labelK.add(number);
+			labelK.add(lab3);
+			labelK.add(name);
+			labelK.add(lab4);
+			labelK.add(amnt);
+			labelK.add(buy);
+			labelK.add(enterpin);
+			labelK.add(enterpinfield);
 			
-			dialog.add(mypanel);
+			dialog.add(labelK);
 			
+			dialog.setUndecorated(true);
 			dialog.setSize(500, 600);
 			dialog.setLocationRelativeTo(null);
 			dialog.setVisible(true);
@@ -1931,8 +1997,15 @@ public class Labs {
 			// TODO Auto-generated method stub
 			JDialog dialog = createDialog("Change Password");
 			
-			JPanel mypanel = new JPanel();
-			mypanel.setLayout(null);
+//			JPanel mypanel = new JPanel();
+//			mypanel.setLayout(null);
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//19.png");
+			labelK.setIcon(image1);
 
 			JLabel lab = createLabel("Enter Old Password: ");
 			lab.setBounds(90, 250, 120, 20);
@@ -1955,16 +2028,17 @@ public class Labs {
 			JTextField confirmnewpass = createTextField();
 			confirmnewpass.setBounds(240, 330, 150, 20);
 
-			mypanel.add(lab);
-			mypanel.add(lab2);
-			mypanel.add(lab3);
-			mypanel.add(oldpass);
-			mypanel.add(newpass);
-			mypanel.add(confirmnewpass);
+			labelK.add(lab);
+			labelK.add(lab2);
+			labelK.add(lab3);
+			labelK.add(oldpass);
+			labelK.add(newpass);
+			labelK.add(confirmnewpass);
 			
-			mypanel.add(chn);
+			labelK.add(chn);
 
-			dialog.add(mypanel);
+			dialog.add(labelK);
+			dialog.setUndecorated(true);
 			dialog.setSize(500, 600);
 			dialog.setLocationRelativeTo(null);
 			dialog.setVisible(true);
@@ -2038,6 +2112,15 @@ public class Labs {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			
+			JDialog dialog = createDialog("Change Password");
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//94.png");
+			labelK.setIcon(image1);
+			
 			thisTableModel = new DefaultTableModel();
 			thisTable = createTable(thisTableModel);
 			thisTable.setFillsViewportHeight(true);
@@ -2046,11 +2129,13 @@ public class Labs {
 		    scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		    JTableHeader tableHeader = thisTable.getTableHeader();
 		    tableHeader.setFont(font);
+		    tableHeader.setForeground(new Color(11, 9, 10));
+		    thisTable.setForeground(new Color(11, 9, 10));
 		    thisTable.setFont(font);
 		    thisTable.setEnabled(false);
 			thisTableModel.addColumn("Account No");
 			thisTableModel.addColumn("Name");
-			thisTableModel.addColumn("Withdrawer's Name");
+			thisTableModel.addColumn("Withdrawer");
 			thisTableModel.addColumn("Amount");
 			thisTableModel.addColumn("Balance");
 			scrollpane.setViewportView(thisTable);
@@ -2075,19 +2160,31 @@ public class Labs {
 					String mybalance = fmt.format(balance);
 					
 					thisTableModel.addRow(new Object[] {num, name, witdrawnam, amont, mybalance});
-				
-					System.out.println(num);
-					System.out.println(name);
-					System.out.println(witdrawnam);
-					System.out.println(amount);
-					System.out.println(balance);
-					System.out.println("");
+//				
+//					System.out.println(num);
+//					System.out.println(name);
+//					System.out.println(witdrawnam);
+//					System.out.println(amount);
+//					System.out.println(balance);
+//					System.out.println("");
 				}
 				
 			}
 			catch (SQLException exp) {
 				JOptionPane.showMessageDialog(null, "Error " + exp.getMessage());
 			}
+			transactPanel = new JPanel();
+			transactPanel.setBounds(0, 80, 490, 500);
+			transactPanel.setForeground(Color.WHITE);
+			transactPanel.add(scrollpane);
+			
+			labelK.add(transactPanel);
+			
+			dialog.add(labelK);
+			dialog.setUndecorated(true);
+			dialog.setSize(500, 600);
+			dialog.setLocationRelativeTo(null);
+			dialog.setVisible(true);
 		}
 		
 	});
@@ -2100,6 +2197,14 @@ public class Labs {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			
+			JDialog dialog = createDialog("Change Password");
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//94.png");
+			labelK.setIcon(image1);
+			
 			thisTableModel = new DefaultTableModel();
 			thisTable = createTable(thisTableModel);
 			thisTable.setFillsViewportHeight(true);
@@ -2108,19 +2213,21 @@ public class Labs {
 		    scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		    JTableHeader tableHeader = thisTable.getTableHeader();
 		    tableHeader.setFont(font);
+		    tableHeader.setForeground(new Color(11, 9, 10));
+		    thisTable.setForeground(new Color(11, 9, 10));
 		    thisTable.setFont(font);
 		    thisTable.setEnabled(false);
 			thisTableModel.addColumn("Account No");
 			thisTableModel.addColumn("Name");
+			thisTableModel.addColumn("Depositor");
 			thisTableModel.addColumn("Amount");
-			thisTableModel.addColumn("Bank Name");
 			thisTableModel.addColumn("Balance");
 			scrollpane.setViewportView(thisTable);
 			thisTable.getModel();
 			
 			try {
 				System.out.println("GALAXY");
-				ResultSet rt = st2.executeQuery("SELECT AccountNumber, AccountName, DepositorssName, Amount, AccountBalance FROM Transfer WHERE HostAccountNumber = '" + accID + "';");
+				ResultSet rt = st2.executeQuery("SELECT AccountNumber, AccountName, DepositorssName, Amount, AccountBalance FROM Deposits WHERE HostAccountNumber = '" + accID + "';");
 				System.out.println("GEGE");
 				System.out.println(rt.next());
 				
@@ -2138,18 +2245,30 @@ public class Labs {
 					
 					thisTableModel.addRow(new Object[] {num, name, depnam, amont, mybalance});
 				
-					System.out.println(num);
-					System.out.println(name);
-					System.out.println(depnam);
-					System.out.println(amount);
-					System.out.println(balance);
-					System.out.println("");
+//					System.out.println(num);
+//					System.out.println(name);
+//					System.out.println(depnam);
+//					System.out.println(amount);
+//					System.out.println(balance);
+//					System.out.println("");
 				}
 				
 			}
 			catch (SQLException exp) {
 				JOptionPane.showMessageDialog(null, "Error " + exp.getMessage());
 			}
+			transactPanel = new JPanel();
+			transactPanel.setBounds(0, 80, 490, 500);
+			transactPanel.setForeground(Color.WHITE);
+			transactPanel.add(scrollpane);
+			
+			labelK.add(transactPanel);
+			
+			dialog.add(labelK);
+			dialog.setUndecorated(true);
+			dialog.setSize(500, 600);
+			dialog.setLocationRelativeTo(null);
+			dialog.setVisible(true);
 		}
 		
 	});
@@ -2162,6 +2281,14 @@ public class Labs {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			
+			JDialog dialog = createDialog("Change Password");
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//94.png");
+			labelK.setIcon(image1);
+			
 			thisTableModel = new DefaultTableModel();
 			thisTable = createTable(thisTableModel);
 			thisTable.setFillsViewportHeight(true);
@@ -2170,13 +2297,13 @@ public class Labs {
 		    scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		    JTableHeader tableHeader = thisTable.getTableHeader();
 		    tableHeader.setFont(font);
+		    tableHeader.setForeground(new Color(11, 9, 10));
+		    thisTable.setForeground(new Color(11, 9, 10));
 		    thisTable.setFont(font);
 		    thisTable.setEnabled(false);
-			thisTableModel.addColumn("Account No");
-			thisTableModel.addColumn("Name");
+			thisTableModel.addColumn("Phone Number");
+			thisTableModel.addColumn("Network");
 			thisTableModel.addColumn("Amount");
-			thisTableModel.addColumn("Bank Name");
-			thisTableModel.addColumn("Balance");
 			scrollpane.setViewportView(thisTable);
 			thisTable.getModel();
 			
@@ -2197,16 +2324,28 @@ public class Labs {
 					
 					thisTableModel.addRow(new Object[] {num, netwrk, amont});
 				
-					System.out.println(num);
-					System.out.println(netwrk);
-					System.out.println(amont);
-					System.out.println("");
+//					System.out.println(num);
+//					System.out.println(netwrk);
+//					System.out.println(amont);
+//					System.out.println("");
 				}
 				
 			}
 			catch (SQLException exp) {
 				JOptionPane.showMessageDialog(null, "Error " + exp.getMessage());
 			}
+			transactPanel = new JPanel();
+			transactPanel.setBounds(0, 80, 490, 500);
+			transactPanel.setForeground(Color.WHITE);
+			transactPanel.add(scrollpane);
+			
+			labelK.add(transactPanel);
+			
+			dialog.add(labelK);
+			dialog.setUndecorated(true);
+			dialog.setSize(500, 600);
+			dialog.setLocationRelativeTo(null);
+			dialog.setVisible(true);
 		}
 		
 	});
@@ -2219,6 +2358,14 @@ public class Labs {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			
+			JDialog dialog = createDialog("Change Password");
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//94.png");
+			labelK.setIcon(image1);
+			
 			thisTableModel = new DefaultTableModel();
 			thisTable = createTable(thisTableModel);
 			thisTable.setFillsViewportHeight(true);
@@ -2227,13 +2374,13 @@ public class Labs {
 		    scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		    JTableHeader tableHeader = thisTable.getTableHeader();
 		    tableHeader.setFont(font);
+		    tableHeader.setForeground(new Color(11, 9, 10));
+		    thisTable.setForeground(new Color(11, 9, 10));
 		    thisTable.setFont(font);
 		    thisTable.setEnabled(false);
-			thisTableModel.addColumn("Account No");
-			thisTableModel.addColumn("Name");
-			thisTableModel.addColumn("Amount");
-			thisTableModel.addColumn("Bank Name");
-			thisTableModel.addColumn("Balance");
+			thisTableModel.addColumn("Phone Number");
+			thisTableModel.addColumn("Network");
+			thisTableModel.addColumn("Data Amount");
 			scrollpane.setViewportView(thisTable);
 			thisTable.getModel();
 			
@@ -2254,18 +2401,30 @@ public class Labs {
 					String amont = fmt.format(amount);
 					
 					thisTableModel.addRow(new Object[] {num, netwrk, datamont, amont});
-				
-					System.out.println(num);
-					System.out.println(netwrk);
-					System.out.println(datamont);
-					System.out.println(amont);
-					System.out.println("");
+//				
+//					System.out.println(num);
+//					System.out.println(netwrk);
+//					System.out.println(datamont);
+//					System.out.println(amont);
+//					System.out.println("");
 				}
 				
 			}
 			catch (SQLException exp) {
 				JOptionPane.showMessageDialog(null, "Error " + exp.getMessage());
 			}
+			transactPanel = new JPanel();
+			transactPanel.setBounds(0, 80, 490, 500);
+			transactPanel.setForeground(Color.WHITE);
+			transactPanel.add(scrollpane);
+			
+			labelK.add(transactPanel);
+			
+			dialog.add(labelK);
+			dialog.setUndecorated(true);
+			dialog.setSize(500, 600);
+			dialog.setLocationRelativeTo(null);
+			dialog.setVisible(true);
 		}
 		
 	});
@@ -2278,6 +2437,14 @@ public class Labs {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
 			
+			JDialog dialog = createDialog("Change Password");
+			
+			JLabel labelK = new JLabel();
+			labelK.setSize(500, 600);
+			
+			ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//94.png");
+			labelK.setIcon(image1);
+			
 			thisTableModel = new DefaultTableModel();
 			thisTable = createTable(thisTableModel);
 			thisTable.setFillsViewportHeight(true);
@@ -2286,13 +2453,14 @@ public class Labs {
 		    scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
 		    JTableHeader tableHeader = thisTable.getTableHeader();
 		    tableHeader.setFont(font);
+		    tableHeader.setForeground(new Color(11, 9, 10));
+		    thisTable.setForeground(new Color(11, 9, 10));
 		    thisTable.setFont(font);
 		    thisTable.setEnabled(false);
+			thisTableModel.addColumn("Service");
 			thisTableModel.addColumn("Account No");
-			thisTableModel.addColumn("Name");
+			thisTableModel.addColumn("Account Name");
 			thisTableModel.addColumn("Amount");
-			thisTableModel.addColumn("Bank Name");
-			thisTableModel.addColumn("Balance");
 			scrollpane.setViewportView(thisTable);
 			thisTable.getModel();
 			
@@ -2314,17 +2482,29 @@ public class Labs {
 					
 					thisTableModel.addRow(new Object[] {serve, num, name, amont});
 				
-					System.out.println(serve);
-					System.out.println(num);
-					System.out.println(name);
-					System.out.println(amount);
-					System.out.println("");
+//					System.out.println(serve);
+//					System.out.println(num);
+//					System.out.println(name);
+//					System.out.println(amount);
+//					System.out.println("");
 				}
 				
 			}
 			catch (SQLException exp) {
 				JOptionPane.showMessageDialog(null, "Error " + exp.getMessage());
 			}
+			transactPanel = new JPanel();
+			transactPanel.setBounds(0, 80, 490, 500);
+			transactPanel.setForeground(Color.WHITE);
+			transactPanel.add(scrollpane);
+			
+			labelK.add(transactPanel);
+			
+			dialog.add(labelK);
+			dialog.setUndecorated(true);
+			dialog.setSize(500, 600);
+			dialog.setLocationRelativeTo(null);
+			dialog.setVisible(true);
 		}
 		
 	});
@@ -2342,6 +2522,8 @@ public class Labs {
 	});
 	
 	
+	
+	
 	font = new Font("Verdana", Font.PLAIN, 10);
 	
 	// CREATING THE TRANSACTION TABLE
@@ -2353,6 +2535,8 @@ public class Labs {
     scrollpane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
     JTableHeader tableHeader = thisTable.getTableHeader();
     tableHeader.setFont(font);
+    tableHeader.setForeground(new Color(11, 9, 10));
+    thisTable.setForeground(new Color(11, 9, 10));
     thisTable.setFont(font);
 //    thisTable.setEnabled(false);
 	thisTableModel.addColumn("Account No");
@@ -2380,14 +2564,14 @@ public class Labs {
 			
 			thisTableModel.addRow(new Object[] {num, name, amont, accname});
 		
-			System.out.println("");
-			System.out.println(num);
-			System.out.println(name);
-			System.out.println(amount);
-			System.out.println(accname);
-			System.out.println(balance);
-			System.out.println("row complete");
-			System.out.println("");
+//			System.out.println("");
+//			System.out.println(num);
+//			System.out.println(name);
+//			System.out.println(amount);
+//			System.out.println(accname);
+//			System.out.println(balance);
+//			System.out.println("row complete");
+//			System.out.println("");
 		}
 	}
 	catch (SQLException exp) {
@@ -2399,7 +2583,8 @@ public class Labs {
 			
 			// INITIALIZING PANELS
 			transactPanel = new JPanel();
-			transactPanel.setBounds(0, 80, 480, 500);
+			transactPanel.setBounds(0, 80, 490, 500);
+			transactPanel.setForeground(Color.WHITE);
 			transactPanel.add(scrollpane);
 			
 			font = new Font("Lato", Font.PLAIN, 13);
@@ -2409,11 +2594,13 @@ public class Labs {
 			accountLabel.setText(loginID);
 			accountLabel.setFont(font);
 			accountLabel.setBounds(20, 10, 80, 40);
+			accountLabel.setForeground(Color.WHITE);
 			
 			accountnumLabel = new JLabel();
 			accountnumLabel.setText(accID);
 			accountnumLabel.setFont(font);
 			accountnumLabel.setBounds(20, 30, 80, 40);
+			accountnumLabel.setForeground(Color.WHITE);
 			
 			font = new Font("Lato", Font.BOLD, 12);
 			
@@ -2421,16 +2608,17 @@ public class Labs {
 			accountbalLabel.setText(acctbalID);
 			accountbalLabel.setFont(font);
 			accountbalLabel.setBounds(350, 20, 120, 40);
+			accountbalLabel.setForeground(Color.WHITE);
 			
 			font = new Font("Verdana", Font.PLAIN, 10);
 			
 			
 			
 			//ADDING LABELS TO FRAME
-			frame.add(accountLabel);
-			frame.add(accountnumLabel);
-			frame.add(accountbalLabel);
-			frame.add(transactPanel);
+			labelK.add(accountLabel);
+			labelK.add(accountnumLabel);
+			labelK.add(accountbalLabel);
+			labelK.add(transactPanel);
 			
 			frame.add(menu);
 			frame.setJMenuBar(menu);	
@@ -2445,6 +2633,7 @@ public class Labs {
 			JLabel label = new JLabel();
 			label.setText(text);
 			label.setFont(font);
+			label.setForeground(new Color(11, 9, 10));
 			return label;
 			
 		}
@@ -2452,12 +2641,14 @@ public class Labs {
 		public JTextField createTextField() {
 			JTextField textField = new JTextField(25);
 			textField.setFont(font);
+			textField.setForeground(new Color(11, 9, 10));
 			return textField;
 		}
 		
 		public JPasswordField createPassField() {
 			JPasswordField PassField = new JPasswordField(25);
 			PassField.setFont(font);
+			PassField.setForeground(new Color(11, 9, 10));
 			return PassField;
 		}
 		
@@ -2473,7 +2664,7 @@ public class Labs {
 		
 		public JTable createTable(DefaultTableModel ox) {
 			JTable table = new JTable(ox);
-			table.setPreferredScrollableViewportSize(new Dimension(460, 560));
+			table.setPreferredScrollableViewportSize(new Dimension(470, 560));
 			table.setFillsViewportHeight(true);
 			table.setFont(new Font("Verdana", Font.PLAIN, 9));
 			table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
@@ -2543,9 +2734,15 @@ public class Labs {
 			
 		JDialog transf = createDialog("Transfers");
 		
+		JLabel labelK = new JLabel();
+		labelK.setSize(500, 600);
 		
-		JPanel mypanel = new JPanel();
-		mypanel.setLayout(null);
+		
+		ImageIcon image1 = new ImageIcon("C://Users//HP//Documents//Bank Application Background Images//3.png");
+		labelK.setIcon(image1);
+		
+//		JPanel mypanel = new JPanel();
+//		mypanel.setLayout(null);
 		
 		JLabel accnt  = createLabel("Account Number");
 		accnt.setBounds(90, 190, 120, 20);
@@ -2664,19 +2861,11 @@ public class Labs {
 													st1.executeUpdate(query);
 													
 													
+													query = "Update Signup set openingBalance = '" + recipnewbalance +"' where AccountNumber = '"+ acnum +"'; ";
+													st1.executeUpdate(query);
 													
-//													query = "INSERT INTO Transfer(AccountNumber, AccountName, Amount, BankName, AccountBalance, HostAccountNumber) VALUES (" +"'" + "3456789321" + "'," + "'" + "Lois" + "'," + "'" +
-//															2000000 + "'," + "'" + "Access" + "'," + "'" + 1200000000 + "'," + "'" + 1234567890 + "');";
-//													st1.executeUpdate(query);
-													
-													
-				//									
-				//									query = "Update Signup set openingBalance = '" + recipnewbalance +"' where AccountNumber = '"+ acnum +"'; ";
-				//									st1.executeUpdate(query);
-				//									
-				//									query = "Update Signup set openingBalance = '" + mynewbalance +"' where AccountNumber = '"+ myaccnum +"'; ";
-				//									st1.executeUpdate(query);
-													
+													query = "Update Signup set openingBalance = '" + mynewbalance +"' where AccountNumber = '"+ myaccnum +"'; ";
+													st1.executeUpdate(query);
 													
 													
 													
@@ -2733,12 +2922,12 @@ public class Labs {
 													query = "INSERT INTO Transfer(AccountNumber, AccountName, Amount, BankName, AccountBalance, HostAccountNumber) VALUES (" +"'" + acnum + "'," + "'" + acname + "'," + "'" +
 															amounttransfered + "'," + "'" + banknam + "'," + "'" + mynewbalance + "'," + "'" + accID + "');";
 													st1.executeUpdate(query);
-				//									
-				//									query = "Update Signup set openingBalance = '" + recipnewbalance +"' where AccountNumber = '"+ acnum +"'; ";
-				//									st1.executeUpdate(query);
-				//									
-				//									query = "Update Signup set openingBalance = '" + mynewbalance +"' where AccountNumber = '"+ myaccnum +"'; ";
-				//									st1.executeUpdate(query);
+													
+													query = "Update Signup set openingBalance = '" + recipnewbalance +"' where AccountNumber = '"+ acnum +"'; ";
+													st1.executeUpdate(query);
+													
+													query = "Update Signup set openingBalance = '" + mynewbalance +"' where AccountNumber = '"+ myaccnum +"'; ";
+													st1.executeUpdate(query);
 													
 													JOptionPane.showMessageDialog(null, "Transfer Successful");
 													int ok = JOptionPane.showConfirmDialog(null, "Do you want to perform another transfer");
@@ -2788,7 +2977,6 @@ public class Labs {
 		thisbnk = new JRadioButton("Houk Bank");
 		thisbnk.setBounds(215, 310, 90, 20);
 		thisbnk.setFont(font);
-//		thisbnk.setSelected(true);
 		thisbnk.setFocusable(false);
 		otherbnk = new JRadioButton("Other Banks");
 		otherbnk.setBounds(310, 310, 95, 20);
@@ -2879,23 +3067,24 @@ public class Labs {
 			}
 		});
 		
-		mypanel.add(accnt);
-		mypanel.add(entacc);
-		mypanel.add(name);
-		mypanel.add(repname);
-		mypanel.add(amount);
-		mypanel.add(amountfield);
-		mypanel.add(bank);
-		mypanel.add(thisbnk);
-		mypanel.add(otherbnk);
-		mypanel.add(bnknam);
-		mypanel.add(entbnknam);
-		mypanel.add(enterpin);
-		mypanel.add(enterpinfield);
-		mypanel.add(my_trans);
+		labelK.add(accnt);
+		labelK.add(entacc);
+		labelK.add(name);
+		labelK.add(repname);
+		labelK.add(amount);
+		labelK.add(amountfield);
+		labelK.add(bank);
+		labelK.add(thisbnk);
+		labelK.add(otherbnk);
+		labelK.add(bnknam);
+		labelK.add(entbnknam);
+		labelK.add(enterpin);
+		labelK.add(enterpinfield);
+		labelK.add(my_trans);
 		
-		transf.add(mypanel);
+		transf.add(labelK);
 		
+		transf.setUndecorated(true);
 		transf.setSize(500, 600);
 		transf.setLocationRelativeTo(null);
 		transf.setVisible(true);
@@ -2998,6 +3187,7 @@ public class Labs {
 			JLabel label = new JLabel();
 			label.setText(text);
 			label.setFont(font);
+			label.setForeground(new Color(11, 9, 10));;
 			return label;
 			
 		}
@@ -3005,12 +3195,14 @@ public class Labs {
 		public JTextField createTextField() {
 			JTextField textField = new JTextField(25);
 			textField.setFont(font);
+			textField.setForeground(new Color(11, 9, 10));
 			return textField;
 		}
 		
 		public JPasswordField createPassField() {
 			JPasswordField PassField = new JPasswordField(25);
 			PassField.setFont(font);
+			PassField.setForeground(new Color(11, 9, 10));
 			return PassField;
 		}
 		
