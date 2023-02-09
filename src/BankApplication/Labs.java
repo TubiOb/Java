@@ -1172,7 +1172,7 @@ public class Labs {
 									mybal = rs.getString(5);
 									convertbal = Double.parseDouble(mybal);
 									amountforint = Double.parseDouble(the_amnt);
-									double finalbalance  = convertbal - amountforint;
+									double finalbalance  = convertbal + amountforint;
 									System.out.println(finalbalance);
 									if (!(the_amnt.isBlank() || pin.isBlank())) {
 										if (confirmMypass(pin) && confirmMyloan(the_amnt)) {
